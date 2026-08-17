@@ -48,15 +48,15 @@
         <a-text value="Il viaggio continua..." align="center" color="#e8bf7d" width="0.65" position="0 -0.045 0.04"></a-text>
 
         <!-- Effetto 3D temporaneo: una bussola che emerge dalla mappa. -->
-        <a-entity position="0 -0.18 0.06"
-          animation="property: position; to: 0 -0.18 0.22; dur: 1300; easing: easeOutElastic"
+        <a-entity position="0 -0.22 0.22" scale="0.1 0.1 0.1"
+          animation="property: scale; to: 1 1 1; dur: 900; easing: easeOutBack"
+          animation__float="property: position; to: 0 -0.16 0.30; dur: 1400; easing: easeInOutSine; dir: alternate; loop: true"
           animation__spin="property: rotation; to: 0 0 360; dur: 9000; easing: linear; loop: true">
-          <a-cylinder radius="0.13" height="0.035" rotation="90 0 0" color="#c99c51" material="metalness: 0.55; roughness: 0.28"></a-cylinder>
-          <a-circle radius="0.112" color="#f2ddb4" position="0 0 0.023"></a-circle>
-          <a-torus radius="0.118" radius-tubular="0.009" color="#6b3d25" position="0 0 0.032"></a-torus>
-          <a-triangle vertex-a="0 0.095 0.04" vertex-b="-0.025 -0.06 0.04" vertex-c="0.025 -0.06 0.04" color="#a6382b"></a-triangle>
-          <a-triangle vertex-a="0 -0.095 0.04" vertex-b="-0.025 0.06 0.04" vertex-c="0.025 0.06 0.04" color="#41352b"></a-triangle>
-          <a-text value="N" align="center" color="#6b3d25" width="0.12" position="0 0.128 0.045"></a-text>
+          <a-circle radius="0.18" color="#e8c77e" material="side: double" position="0 0 0"></a-circle>
+          <a-torus radius="0.18" radius-tubular="0.02" color="#6b3d25" material="side: double" position="0 0 0.015"></a-torus>
+          <a-triangle vertex-a="0 0.14 0.03" vertex-b="-0.04 -0.10 0.03" vertex-c="0.04 -0.10 0.03" color="#a6382b" material="side: double"></a-triangle>
+          <a-triangle vertex-a="0 -0.14 0.03" vertex-b="-0.04 0.10 0.03" vertex-c="0.04 0.10 0.03" color="#403126" material="side: double"></a-triangle>
+          <a-text value="N" align="center" color="#403126" width="0.17" position="0 0.205 0.04"></a-text>
         </a-entity>
 
         <!-- Aree di tocco volutamente grandi per funzionare bene su schermi piccoli. -->
