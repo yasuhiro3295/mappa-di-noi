@@ -47,6 +47,18 @@
         <a-text value="Mappa riconosciuta" align="center" color="#fff4dc" width="1.0" position="0 0.025 0.04"></a-text>
         <a-text value="Il viaggio continua..." align="center" color="#e8bf7d" width="0.65" position="0 -0.045 0.04"></a-text>
 
+        <!-- Effetto 3D temporaneo: una bussola che emerge dalla mappa. -->
+        <a-entity position="0 -0.18 0.06"
+          animation="property: position; to: 0 -0.18 0.22; dur: 1300; easing: easeOutElastic"
+          animation__spin="property: rotation; to: 0 0 360; dur: 9000; easing: linear; loop: true">
+          <a-cylinder radius="0.13" height="0.035" rotation="90 0 0" color="#c99c51" material="metalness: 0.55; roughness: 0.28"></a-cylinder>
+          <a-circle radius="0.112" color="#f2ddb4" position="0 0 0.023"></a-circle>
+          <a-torus radius="0.118" radius-tubular="0.009" color="#6b3d25" position="0 0 0.032"></a-torus>
+          <a-triangle vertex-a="0 0.095 0.04" vertex-b="-0.025 -0.06 0.04" vertex-c="0.025 -0.06 0.04" color="#a6382b"></a-triangle>
+          <a-triangle vertex-a="0 -0.095 0.04" vertex-b="-0.025 0.06 0.04" vertex-c="0.025 0.06 0.04" color="#41352b"></a-triangle>
+          <a-text value="N" align="center" color="#6b3d25" width="0.12" position="0 0.128 0.045"></a-text>
+        </a-entity>
+
         <!-- Aree di tocco volutamente grandi per funzionare bene su schermi piccoli. -->
         <a-plane class="place" data-title="Punto prova 1" data-copy="Qui potremo mettere una foto, un video o un messaggio." width="0.23" height="0.12" color="#a6382b" opacity="0.94" position="-0.33 -0.19 0.07" material="side: double">
           <a-text value="PROVA 1" align="center" color="#fff8ea" width="0.44" position="0 0 0.01"></a-text>
