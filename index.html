@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La mappa di noi</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      #hint { position: fixed; z-index: 5; inset: auto 16px 18px; padding: 11px 14px; border-radius: 12px; background: rgba(24, 15, 8, .82); color: #fff8ea; text-align: center; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <div id="hint">Inquadra la mappa intera per iniziare</div>
+
+    <a-scene
+      mindar-image="imageTargetSrc: ./assets/mappa.mind; maxTrack: 1; uiScanning: yes; uiLoading: yes;"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights: true"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <!-- Il rapporto 1.5 corrisponde alla mappa orizzontale. -->
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane position="0 0 0.02" width="0.76" height="0.18" color="#312014" opacity="0.88"></a-plane>
+        <a-text value="Mappa riconosciuta" align="center" color="#fff4dc" width="1.0" position="0 0.025 0.04"></a-text>
+        <a-text value="Il viaggio continua..." align="center" color="#e8bf7d" width="0.65" position="0 -0.045 0.04"></a-text>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
